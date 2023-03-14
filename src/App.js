@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-function App() {
+import Accordion from "./components/Accordion";
+import AccordionData from "./accordion-data/AccordionData";
+import "./components/Accordion.css";
+
+
+const App = () => {
+
+  const [contents, setContents] = useState(AccordionData);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <div>
+          <h3>เครื่องมืพัฒนาเว็บ 2021</h3>
+          <section>
+            {contents.map((content)=>{
+              return <Accordion key={content.id} {...content}/>
+            })}
+          </section>
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;

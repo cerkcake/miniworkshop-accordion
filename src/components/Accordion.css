@@ -1,0 +1,32 @@
+.acc-main{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.ws-acc-container{
+  width: 90vw;
+  margin: 5rem auto;
+  background: #fff;
+  border-radius: 0.25rem;
+  padding: 2rem 2rem;
+  max-width: 920px;
+}
+
+.acc-content{
+  padding: 1rem 1.5rem;
+  border: 2px solid #eae6eb;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.acc-content header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acc-content p{
+  color: purple;
+}
